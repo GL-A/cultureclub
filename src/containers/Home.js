@@ -1,11 +1,10 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
 //
-import logoImg from '../logo.png'
+import logoImg from '../assets/logo.png'
 
 export default withSiteData(() => (
   <div>
-    <h1 style={{ textAlign: 'center' }}>Welcome to</h1>
-    <img src={logoImg} alt="" />
+    <h1>Culture Club</h1>
   </div>
 ))
