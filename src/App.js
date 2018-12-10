@@ -18,6 +18,16 @@ const App = () => (
       <div className="content">
         <Routes />
       </div>
+      <footer>
+        <ul>
+          <li></li>
+          <li>@2018 CultureClub</li>
+          <li className="footer-socials-li">
+            <img className="social-svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/2000px-F_icon.svg.png" />
+            <img className="social-svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2000px-Instagram_logo_2016.svg.png" />
+          </li>
+        </ul>
+      </footer>
     </div>
   </Router>
 )

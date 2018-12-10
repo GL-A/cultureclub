@@ -1,0 +1,40 @@
+.home-jumbotron {
+  height: 600px;
+  display: flex;
+}
+.home-jumbo-inner {
+  width: calc(100% / 3);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: '100%';
+}
+.home-featured {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.home-featured-products {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+.home-featured-header {
+  padding: 0 0 60px 0;
+}
+.home-featured-item {
+  height: 280px;
+  width: 250px;
+  background: green;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border: solid 1px #7CE7DA;
+}
+.home-featured-item img {
+  height: 100%;
+  width: 100%;
+
+}

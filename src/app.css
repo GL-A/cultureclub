@@ -4,6 +4,16 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  background: #EFEFEF;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -33,9 +43,10 @@ nav a:first-child {
 }
 #logoImg{
   height: 60px;
+  margin-right: 45px;
 }
 .content {
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 .image {
   width: 25%;
@@ -46,4 +57,29 @@ nav a:first-child {
 .blog-post {
  display: flex;
  flex-direction: column;
+}
+footer {
+  height: 50px;
+  background: #F95234;
+  display: flex;
+  justify-content: center;
+}
+footer ul {
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer li {
+  width: calc(80% / 3);
+  display: flex;
+  justify-content: center;
+}
+.footer-socials-li {
+  justify-content: flex-end;
+}
+.social-svg{
+  height: 40px;
+  padding: 0 10px;
 }
