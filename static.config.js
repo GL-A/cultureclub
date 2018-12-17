@@ -85,15 +85,35 @@ export default {
   getRoutes: async () => {
     const posts = await getPosts()
     const shirts = await getShirts()
-    console.log('shirts', shirts)
-    // console.log("posts data", posts)
+    // let shirtKeys = Object.keys(shirts.data)
+    // console.log('shirtkeys', shirts)
+    shirts.map(shirt => {
+      const productThumbs = []
+      for(let key in shirt.data){
+        if(key.includes('thumbnail')){
+          productThumbs.push(shirt.data[key])
+        }
+      }
+      shirt.productThumbs = productThumbs
+      return shirt
+    })
+    console.log('jesus', shirts)
+
     return [
       {
         path: '/',
         component: 'src/containers/Home',
         getData: () => ({
-          posts,
-        })
+          shirts,
+        }),
+        children: shirts.map(shirt => ({
+          path: `/product/${shirt.data.slug}`,
+          component: 'src/containers/Product',
+          getData: () => ({
+            shirt,
+            shirts
+          })
+        }))
       },
       {
         path: '/about',
@@ -102,10 +122,6 @@ export default {
       {
         path: '/products',
         component: 'src/containers/Products'
-      },
-      {
-        path: '/product',
-        component: 'src/containers/Product'
       },
       {
         path: '/blog',
