@@ -13,7 +13,7 @@ const App = () => (
       <nav>
         <Link to="/">Culture Club</Link>
         <Link to="/"><img id="logoImg" src={logoImg} /></Link>
-        <Link to="/about">Products</Link>
+        <Link to="/product">Products</Link>
       </nav>
       <div className="content">
         <Routes />
