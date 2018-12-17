@@ -33,6 +33,6 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Price", widget: "number", name: "price"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Second Image", name: "thumbnail", widget: "image"}
-      - {label: "Third Image", name: "thumbnail", widget: "image"}
-      - {label: "Fourth Image", name: "thumbnail", widget: "image"}
+      - {label: "Second Image", name: "thumbnail2", widget: "image"}
+      - {label: "Third Image", name: "thumbnail3", widget: "image"}
+      - {label: "Fourth Image", name: "thumbnail4", widget: "image"}
