@@ -13,7 +13,6 @@ export default withRouteData(({ shirt, shirts }) => (
           <ul className="product-thumbs-ul">
             {
               Object.keys(shirt.data).map((key, idx) => {
-                console.log('key', key)
                 if(key.includes('thumbnail')){
                   return <li
                     style={{backgroundImage: `url(${shirt.data[key]})`}}
