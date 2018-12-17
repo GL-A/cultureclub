@@ -83,21 +83,25 @@ export default {
     title: 'React Static with Netlify CMS',
   }),
   getRoutes: async () => {
-    const posts = await getPosts()
-    const shirts = await getShirts()
-    // let shirtKeys = Object.keys(shirts.data)
-    // console.log('shirtkeys', shirts)
-    shirts.map(shirt => {
-      const productThumbs = []
-      for(let key in shirt.data){
-        if(key.includes('thumbnail')){
-          productThumbs.push(shirt.data[key])
+    let posts;
+    let shirts;
+    try {
+       posts = await getPosts()
+       shirts = await getShirts()
+
+      shirts.map(shirt => {
+        const productThumbs = []
+        for(let key in shirt.data){
+          if(key.includes('thumbnail')){
+            productThumbs.push(shirt.data[key])
+          }
         }
-      }
-      shirt.productThumbs = productThumbs
-      return shirt
-    })
-    console.log('jesus', shirts)
+        shirt.productThumbs = productThumbs
+        return shirt
+      })
+    } catch(err) {
+      console.log('error', err)
+    }
 
     return [
       {
