@@ -29,12 +29,14 @@ a {
 
 
 nav {
+  position: fixed;
   background: white;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 70px;
   border: solid 1px #FFCE5A;
+  z-index: 2;
 }
 
 nav a {

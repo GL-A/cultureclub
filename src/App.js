@@ -11,9 +11,9 @@ const App = () => (
   <Router>
     <div>
       <nav>
-        <Link to="/">Culture Club</Link>
+        <Link style={{marginLeft: "50px"}} to="/">Culture Club</Link>
         <Link to="/"><img id="logoImg" src={logoImg} /></Link>
-        <Link to="/product">Products</Link>
+        <Link style={{marginRight: "50px"}} to="/product">Products</Link>
       </nav>
       <div className="content">
         <Routes />

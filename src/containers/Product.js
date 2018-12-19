@@ -28,6 +28,16 @@ export default withRouteData(({ shirt, shirts }) => (
           <h3>${shirt.data.price}</h3>
           <p>{shirt.content}</p>
         </div>
+        <button
+          className="snipcart-add-item"
+          data-item-id="2"
+          data-item-name={shirt.data.title}
+          data-item-price={`${shirt.data.price.toString()}`}
+          data-item-weight="20"
+          data-item-url={window.location.href}
+          data-item-description={shirt.data.content}>
+          Buy Shirt
+        </button>
         <br />
       </div>
       <div className="home-featured-header">
