@@ -29,13 +29,13 @@ export default withRouteData(({ shirt, shirts, route }) => (
           <p>{shirt.content}</p>
         </div>
         <button
-
           className="snipcart-add-item"
           data-item-id="2"
           data-item-name={shirt.data.title}
           data-item-price={`${shirt.data.price.toString()}`}
           data-item-weight="20"
-          data-item-url="/"
+          // data-item-url="cultureclub.netlify.com"
+          data-item-url={"https://cultureclub.netlify.com/" + route}
           // data-item-url={`cultureclub.netlify.com${route}`}
           data-item-description={shirt.data.content}>
           Buy Shirt
