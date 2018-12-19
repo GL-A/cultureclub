@@ -2,6 +2,8 @@ const fs = require('fs')
 const klaw = require('klaw')
 const path = require('path')
 const matter = require('gray-matter')
+import React, { Component } from 'react'
+
 function getShirts () {
   const items = []
   // Walk ("klaw") through posts directory and push file paths into items array //
@@ -131,4 +133,40 @@ export default {
       },
     ]
   },
+  Document: class CustomHtml extends Component {
+    render() {
+      const { Html, Head, Body, children, renderMeta } = this.props
+
+      return (
+        <Html>
+          <Head>
+            <meta charSet="UTF-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+            {renderMeta.styleTags}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+            <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+            <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MWJiZjg5NDQtOTQ4NC00MmRkLTljMzQtNWI4NWFhOGRlMmQ2NjM2ODA3NzcxODA4MjQ4Nzk5"></script>
+
+          </Head>
+          <Body>{children}</Body>
+        </Html>
+      )
+    }
+  }
+  // Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
+  //   <Html lang="en-US">
+  //     <Head>
+  //       <meta charSet="UTF-8" />
+  //       <meta name="viewport" content="width=device-width, initial-scale=1" />
+  //       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  //       <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+  //       <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MWJiZjg5NDQtOTQ4NC00MmRkLTljMzQtNWI4NWFhOGRlMmQ2NjM2ODA3NzcxODA4MjQ4Nzk5"></script>
+
+  //     </Head>
+  //     <Body>{children}</Body>
+  //   </Html>
+  // )
 }
