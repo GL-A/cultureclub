@@ -98,7 +98,8 @@ export default {
           component: 'src/containers/Product',
           getData: () => ({
             shirt,
-            shirts
+            shirts,
+            route: `/product/${shirt.data.slug}`
           })
         }))
       },

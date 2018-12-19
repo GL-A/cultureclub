@@ -6,7 +6,7 @@ import Markdown from 'react-markdown'
 import '../styles/product.css'
 //
 
-export default withRouteData(({ shirt, shirts }) => (
+export default withRouteData(({ shirt, shirts, route }) => (
     <div className="product">
       <div className="product-jumbotron">
         <div className="product-images">
@@ -34,10 +34,11 @@ export default withRouteData(({ shirt, shirts }) => (
           data-item-name={shirt.data.title}
           data-item-price={`${shirt.data.price.toString()}`}
           data-item-weight="20"
-          data-item-url={window.location.href}
+          data-item-url={route}
           data-item-description={shirt.data.content}>
           Buy Shirt
         </button>
+        {console.log('route', route)}
         <br />
       </div>
       <div className="home-featured-header">
