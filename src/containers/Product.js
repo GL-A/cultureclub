@@ -30,7 +30,7 @@ export default withRouteData(({ shirt, shirts, route }) => (
         </div>
         <button
           className="snipcart-add-item"
-          data-item-id="2"
+          data-item-id={shirt.data.slug}
           data-item-name={shirt.data.title}
           data-item-price={`${shirt.data.price.toString()}`}
           data-item-weight="20"
@@ -40,7 +40,7 @@ export default withRouteData(({ shirt, shirts, route }) => (
           data-item-description={shirt.data.content}>
           Buy Shirt
         </button>
-        {console.log('route', route)}
+        {console.log('route', shirt)}
         <br />
       </div>
       <div className="home-featured-header">
