@@ -29,43 +29,39 @@ export default withRouteData(({ shirt, shirts, route }) => (
             <h3>{shirt.data.title}</h3>
             <h3>${shirt.data.price}</h3>
             <p>{shirt.content}</p>
+            <div className="product-desc-size">
+              <h3>Size</h3>
+              <ul>
+                <li>s</li>
+                <li>m</li>
+                <li>l</li>
+              </ul>
+            </div>
           </div>
 
-          <button
+          <a
             href='#'
             className="snipcart-add-item"
             data-item-id={shirt.data.slug}
             data-item-name={shirt.data.title}
             data-item-price={`${shirt.data.price.toString()}`}
             data-item-weight="20"
-            data-item-custom2-options="Small|Medium|Large"
-            data-item-custom2-value="Medium"
-            data-item-url={"https://cultureclub.netlify.com/"}
+            data-item-url={"http://localhost:3000/"}
             data-item-description={shirt.data.content}
             >
               Add To Bag
-          </button>
+          </a>
 
         </div>
-        {/* <a
-          href='#'
-          className="snipcart-add-item"
-          data-item-id={shirt.data.slug}
-          data-item-name={shirt.data.title}
-          data-item-price={`${shirt.data.price.toString()}`}
-          data-item-weight="20"
-          data-item-custom2-options="Small|Medium|Large"
-          data-item-custom2-value="Medium"
-          data-item-url={"https://cultureclub.netlify.com/"}
-          data-item-description={shirt.data.content}
-          >
-          Buy Shirt
-        </a> */}
       </div>
       <div className="home-featured-header">
         <h3>Featured Products</h3>
       </div>
       <Products products={shirts} />
+      {/* <div class="snipcart-summary">
+    Number of items: <span class="snipcart-total-items"></span>
+    Total price: <span class="snipcart-total-price"></span>
+</div> */}
     </div>
   )
 )

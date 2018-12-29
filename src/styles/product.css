@@ -47,10 +47,30 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.product-desc-size {
+  padding-top: 20px;
+}
+.product-desc-size ul {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+}
+.product-desc-size li {
+  border: solid 1px black;
+  width: 20px;
+  text-align: center;
+  margin-top: 10px;
+  /* padding: 5px; */
+}
 .product-desc-container p {
   margin-top: 20px;
 }
-.product-desc-container button {
+.product-desc-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
   margin: 0;
   font-size: 15px;
   background: #F95234;
