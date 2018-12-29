@@ -13,7 +13,7 @@ const App = () => (
       <nav>
         <Link style={{marginLeft: "50px"}} to="/">Culture Club</Link>
         <Link to="/"><img id="logoImg" src={logoImg} /></Link>
-        <Link style={{marginRight: "50px"}} to="/product">Products</Link>
+        <Link style={{marginRight: "50px"}} to="/">Products</Link>
       </nav>
       <div className="content">
         <Routes />
@@ -23,8 +23,8 @@ const App = () => (
           <li></li>
           <li>@2018 CultureClub</li>
           <li className="footer-socials-li">
-            <img className="social-svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/2000px-F_icon.svg.png" />
-            <img className="social-svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2000px-Instagram_logo_2016.svg.png" />
+            <img className="social-svg" src="https://image.flaticon.com/icons/svg/33/33702.svg" />
+            <img className="social-svg" src="https://image.flaticon.com/icons/svg/69/69366.svg" />
           </li>
         </ul>
       </footer>
