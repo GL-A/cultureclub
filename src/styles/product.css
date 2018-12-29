@@ -7,7 +7,7 @@
 }
 .product-jumbotron {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   flex-direction: row;
   width: 90%;
@@ -42,5 +42,20 @@
 }
 .product-desc-container {
   width: 250px;
-  height: 400px;
+  height: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-desc-container p {
+  margin-top: 20px;
+}
+.product-desc-container button {
+  margin: 0;
+  font-size: 15px;
+  background: #F95234;
+  border: none;
+  width: 200px;
+  height: 40px;
+  margin-top: -2000px;
 }

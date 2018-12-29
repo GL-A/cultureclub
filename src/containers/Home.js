@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { withSiteData, withRouteData, Link } from 'react-static'
+import { DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 //
 import Products from './Products'
 import logoImg from '../assets/Culture Club Logo(Final).svg'
@@ -34,10 +36,18 @@ class JumboSection extends Component{
   }
 }
 class Home extends Component{
+  scrollTo = () => {
+    scroller.scrollTo('scroll-to-element', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    })
+  }
   render() {
     return (
       <div>
         <section className="home-jumbotron">
+          {/* <li> <a onClick={this.scrollTo}>Scroll To 100!</a></li> */}
           <JumboSection text={text} img={img2} />
           <div className="home-jumbo-inner" style={{ position: 'relative' }} >
             <img
@@ -52,7 +62,9 @@ class Home extends Component{
           </div>
           <Products products={this.props.shirts}/>
         </section>
-
+        {/* <Element name="scroll-to-element" className="element">
+          Scroll to element
+        </Element> */}
       </div>
     )
   }
