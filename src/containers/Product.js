@@ -13,8 +13,11 @@ class Product extends Component {
   changeSize = (s) => {
     this.setState({size: s})
   }
-
+  componentDidMount() {
+    console.log('we testing', "https://cultureclub.netlify.com"+ this.props.route)
+  }
   render() {
+
     const shirt = this.props.shirt
     const shirts = this.props.shirts
     return (
@@ -63,7 +66,7 @@ class Product extends Component {
               data-item-name={shirt.data.title + ' ' + this.state.size}
               data-item-price={`${shirt.data.price.toString()}`}
               data-item-weight="20"
-              data-item-url={"http://localhost:3000/"}
+              data-item-url={"https://cultureclub.netlify.com"+ this.props.route}
               data-item-description={shirt.data.content}
               >
                 Add To Bag

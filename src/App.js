@@ -55,7 +55,7 @@ class App extends Component {
 
             </div>
             <div>
-              <img style={{ width: '30px'}} src={basket}></img>
+              <img href="#" className="snipcart-checkout" style={{ width: '30px'}} src={basket}></img>
               <div className="snipcart-summary">
                 <span className="snipcart-total-items"></span>
               </div>
