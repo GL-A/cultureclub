@@ -45,7 +45,7 @@ class Product extends Component {
               <div className="product-desc-size">
                 <h3>Size</h3>
                 <ul>
-                  {['s', 'm', 'l'].map((size,idx) => {
+                  {['S', 'M', 'L'].map((size,idx) => {
                     return (
                       <li
                         key={idx}
@@ -77,7 +77,7 @@ class Product extends Component {
         <div className="home-featured-header">
           <h3>Featured Products</h3>
         </div>
-        <Products products={shirts} />
+        <Products size="m" products={shirts} />
 
       </div>
     )

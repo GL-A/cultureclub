@@ -54,6 +54,13 @@ nav a:first-child {
   color: #A70B0B;
   /* font-style: italic; */
 }
+.items-inbag {
+  position: absolute;
+  top: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  backface-visibility: green;
+}
 #logoImg{
   height: 40px;
   /* margin-right: 45px; */
@@ -97,3 +104,4 @@ footer li {
   padding: 0 10px;
   cursor: pointer;
 }
+

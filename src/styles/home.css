@@ -53,11 +53,11 @@
 .home-featured-item {
   height: 280px;
   width: 250px;
-  background: green;
+  /*background: green;*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  border: solid 1px #7CE7DA;
+  border: solid 1px black;
 }
 .home-featured-item img {
   height: 100%;

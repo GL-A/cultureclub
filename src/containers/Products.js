@@ -3,11 +3,12 @@ import { Link } from 'react-static'
 
 //
 
-export default ({products}) => (
+export default ({products, size}) => (
   <div className="home-featured-products">
     { products && products.map((shirt, idx) => {
       return (
-        <div key={idx} className="home-featured-item">
+        <div style={{ height: size === 'm' && '210px', width: size === 'm' && '180px' }} 
+        key={idx} className="home-featured-item">
           <Link to={`/product/${shirt.data.slug}`}>
             <img src={shirt.data.thumbnail} />
           </Link>
