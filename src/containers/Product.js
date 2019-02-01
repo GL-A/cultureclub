@@ -67,6 +67,10 @@ class Product extends Component {
               data-item-price={`${shirt.data.price.toString()}`}
               data-item-weight="20"
               data-item-url={"https://cultureclub.netlify.com"+ this.props.route}
+              data-item-custom2-name="Size"
+              data-item-custom2-options="Small|Medium|Large"
+              data-item-custom3-name="Color"
+              data-item-custom3-options="White|Black|Red"
               data-item-description={shirt.data.content}
               >
                 Add To Bag
