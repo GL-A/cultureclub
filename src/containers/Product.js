@@ -70,7 +70,7 @@ class Product extends Component {
               data-item-custom2-name="Size"
               data-item-custom2-options="Small|Medium|Large"
               data-item-custom3-name="Color"
-              data-item-custom3-options="White|Black|Red"
+              data-item-custom3-options="White|Black|Blue"
               data-item-description={shirt.data.content}
               >
                 Add To Bag
