@@ -13,4 +13,8 @@ thumbnail4: /uploads/download.jpeg
 ---
 This Garment is the perfect homage to Portland, Oregon by representing  Style in a three-quarter sleeve baseball jersey and Originality both by being in travels or inside P-town.
 
+
+
+
+
 **Fabric**: 50%cotton 50%polyester
