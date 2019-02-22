@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: PDX Moderno
+title: PDX Moderno - W&M
 date: '2018-12-16T23:33:49-08:00'
 color: White and Maroon
 size: Large
