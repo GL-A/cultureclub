@@ -7,7 +7,7 @@ size: Large
 small: '10'
 medium: '10'
 large: '7'
-x-large: '5'
+xlarge: '5'
 price: '35'
 thumbnail: /uploads/culture-club-long-sleve-mock-up-final.jpg
 thumbnail2: /uploads/5469764-2.jpeg
