@@ -9,18 +9,28 @@ import '../styles/product.css'
 class Product extends Component {
   state = {
     size: 's',
-    small: 0,
-    medium: 0,
-    large: 0,
-    xLarge: 0
+    sizes: [
+      ['small', 's', 0]
+      ['medium', 'm', 0]
+      ['large', 'l', 0]
+      ['xlarge', 'xl', 0]
+    ]
   }
   changeSize = (s) => {
     this.setState({size: s})
   }
   componentDidMount() {
-    console.log('we testing', "https://cultureclub.netlify.com"+ this.props.route)
-    const { small, medium, large } = this.props.shirt.data
-    console.log('sizes', small, medium, large)
+    // console.log('we testing', "https://cultureclub.netlify.com"+ this.props.route)
+    const { small, medium, large, xlarge } = this.props.shirt.data
+    const sizes = [
+      [ 'small', 's', small ], ['medium', 'm', medium],
+      ['large', 'l', large], ['xlarge', 'xl', xlarge]
+    ]
+    let cartSizes = [...sizes].filter(size => {
+      return size[2] > 0
+    }).map(size => size[0]).join('|')
+
+    this.setState({ sizes: sizes, cartSizes })
   }
   render() {
 
@@ -49,17 +59,19 @@ class Product extends Component {
               <h3>${shirt.data.price}</h3>
               <p>{shirt.content}</p>
               <div className="product-desc-size">
-                <h3>Size</h3>
+                <h3>Sizes</h3>
                 <ul>
-                  {['S', 'M', 'L'].map((size,idx) => {
-                    return (
-                      <li
-                        key={idx}
-                        style={{ background: size === this.state.size ? '#F95639' : ''}}
-                        onClick={() => this.changeSize(size)}>
-                        {size}
-                      </li>
-                    )
+                  {this.state.sizes.map((size,idx) => {
+                    if(size[2] > 0) {
+                      return (
+                        <li
+                          key={idx}
+                          style={{ background: size[1] === this.state.size ? '#F95639' : ''}}
+                          onClick={() => this.changeSize(size[1])}>
+                          {size[1].toUpperCase()}
+                        </li>
+                      )
+                    }
                   })}
                 </ul>
               </div>
@@ -73,10 +85,8 @@ class Product extends Component {
               data-item-price={`${shirt.data.price.toString()}`}
               data-item-weight="20"
               data-item-url={"https://cultureclub.netlify.com"+ this.props.route}
-              data-item-custom2-name="Size"
-              data-item-custom2-options="Small|Medium|Large"
               data-item-custom3-name="Color"
-              data-item-custom3-options="White|Black|Blue"
+              data-item-custom3-options={shirt.data.color}
               data-item-description={shirt.data.content}
               >
                 Add To Bag

@@ -54,12 +54,12 @@ class App extends Component {
               }
 
             </div>
-            <div style={{ position: 'relative' }}>
-              <img 
-                href="#" 
-                className="snipcart-checkout" 
+            <div style={{ position: 'relative',cursor: 'pointer' }}>
+              <img
+                href="#"
+                className="snipcart-checkout"
                 style={{ width: '30px' }} src={basket}></img>
-              <div style={{ color: '#A50F15' }} className="snipcart-summary items-inbag">
+              <div style={{ color: '#A50F15', zIndex: '-1' }} className="snipcart-summary items-inbag">
                 <span className="snipcart-total-items"></span>
               </div>
             </div>
