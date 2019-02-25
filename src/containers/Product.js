@@ -20,6 +20,7 @@ class Product extends Component {
 
     const shirt = this.props.shirt
     const shirts = this.props.shirts
+    console.log('shirt', shirt)
     return (
       <div className="product">
         <div className="product-jumbotron">
