@@ -4,6 +4,10 @@ title: PDX Moderno - W&B
 date: '2019-02-21T18:35:09-08:00'
 color: White and black
 size: Small
+small: '10'
+medium: '9'
+large: '9'
+x-large: '3'
 price: '35'
 thumbnail: /uploads/culture-club-long-sleve-mock-up-final.jpg
 thumbnail2: /uploads/5469764-2.jpeg
