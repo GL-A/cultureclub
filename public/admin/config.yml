@@ -34,7 +34,7 @@ collections:
       - {label: "Small", name: "small", widget: "number"}
       - {label: "Medium", name: "medium", widget: "number"}
       - {label: "Large", name: "large", widget: "number"}
-      - {label: "X-Large", name: "x-large", widget: "number"}
+      - {label: "XLarge", name: "xlarge", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Price", widget: "number", name: "price"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}

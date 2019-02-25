@@ -8,19 +8,24 @@ import '../styles/product.css'
 
 class Product extends Component {
   state = {
-    size: 'm'
+    size: 's',
+    small: 0,
+    medium: 0,
+    large: 0,
+    xLarge: 0
   }
   changeSize = (s) => {
     this.setState({size: s})
   }
   componentDidMount() {
     console.log('we testing', "https://cultureclub.netlify.com"+ this.props.route)
+    const { small, medium, large } = this.props.shirt.data
+    console.log('sizes', small, medium, large)
   }
   render() {
 
     const shirt = this.props.shirt
     const shirts = this.props.shirts
-    console.log('shirt', shirt)
     return (
       <div className="product">
         <div className="product-jumbotron">
