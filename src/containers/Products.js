@@ -7,10 +7,26 @@ export default ({products, size}) => (
   <div className="home-featured-products">
     { products && products.map((shirt, idx) => {
       return (
-        <div style={{ height: size === 'm' && '210px', width: size === 'm' && '180px' }} 
-        key={idx} className="home-featured-item">
+        <div
+          style={{backgroundImage: `${shirt.data.thumbnail}`}}
+          // style={{ height: size === 'm' && '210px', width: size === 'm' && '180px' }}
+          key={idx} className="home-featured-item">
           <Link to={`/product/${shirt.data.slug}`}>
-            <img src={shirt.data.thumbnail} />
+            {/* <img src={shirt.data.thumbnail} /> */}
+            <div
+              style={{
+
+                backgroundImage: `url(${shirt.data.thumbnail})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                height: "200px",
+                width: "200px",
+                // background: "green"
+              }}
+              >
+
+            </div>
           </Link>
         </div>
       )
